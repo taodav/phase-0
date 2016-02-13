@@ -50,3 +50,10 @@ I think the most important commands to know are the pipeline and redirection com
 -help - Lists and describes the functions of commands
 
 # 1.4 Forking and Cloning
+1. If you were going to write instructions for a new person on how to create a new repo, fork a repo, and clone a repo, what would they be? Why would you fork a repository as opposed to create a new one?
+
+In order to create a new repo, you’d have to turn an existing project or empty file into a repo with the git init command. Forking a repo on the other hand, is a lot simpler, and is already on github. In order to fork a repo, you just have to press the fork button in github, and choose to fork a repo to another account. This will create a copy of the forked project into your account. In order to clone this repo, you’d have to go on your CLI and enter the git clone <repo> command and copy the repo from the repo you just forked online into your own local drive.
+
+2. What struggles did you have setting up git and GitHub? What did you learn in the process?
+
+Both the git and Github process were both very smooth, with very little trouble in terms of forking and cloning the repos. In the process, I learned how to recursively remove a directory with files already in it with the rm -r -force command.
