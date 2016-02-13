@@ -17,18 +17,18 @@ The first stage is to create a new branch and work on that branch. After finishi
 git status
 git pull
 git checkout -b new-branch
-# do your work here
+do your work here
 git add . (or <filename>)
 git commit -m "your message here" (or -v)
 git push origin new-branch
 
-# then you go on github, submit new pull request, merge branches, then you're good to go for your pull request from github
+then you go on github, submit new pull request, merge branches, then you're good to go for your pull request from github
 
 git checkout master
 
 git pull origin master
 
-# OR
+OR
 
 git fetch origin master
 
