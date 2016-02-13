@@ -15,6 +15,8 @@ Open Source software is sharing the source code of a project with the public, al
 Assess the importance of using licenses.
 I think open source software is a great thing - seeing as it isn't a mandated thing, it opens doors for a lot of people and organizations to grow their projects if they want, and to even potentially benefit from this sharing. It might seem scary to allow other people to see and even copy your own code, but again this is purely a decision for the original developer.
 
+That's why licenses exist - to protect the ideas of developers if they so choose to not share their projects.
+
 
 ..*What concepts were solidified in the challenge? Did you have any "aha" moments? What did you struggle with?
 Because of the many, many, many times I've practiced with the entire making a pull request workflow, I feel like I'm really starting to be comfortable with the entire process of creating separate branches and committing those to the master branch. At first, I really struggled with remembering the flow of the entire process - what came first and what comes next. I always started my projects without creating a feature branch first, so changing that habit took a few tries and a few reflection entries. 
