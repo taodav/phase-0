@@ -26,7 +26,7 @@ For my visitors, I primarily want them to contact me and see my portfolio/blog. 
 
 I think the main thing someone should know about design and user experience is that the results of these fields don't have directly measurable results. But UX and design are still very important in terms of the user experience and the 'feel' of the website.
 
-**What is user experience design and why is it valuable? **
+**What is user experience design and why is it valuable?**
 
 User Experience Design is the design of a user interface that appeals to the user experience, and decides whether or not a user becomes a regular user or not. It strives to create a meaningful experience for the user through ease of use and comfortability in interacting with the website - these factors matter a lot when you're looking for more users. Without properly considering user experience design, a website/program could lose thousands even millions of users.
 
