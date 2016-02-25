@@ -1,0 +1,106 @@
+* {
+	color: #000080;
+	background: #ffffff;
+}
+
+a {
+	color: #800080;
+}
+
+a:visited {
+	color: #ff0000;
+}
+
+h1 {
+	font-size: 20px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+h3 {
+	font-size: 13px;
+	margin: -12px 0px -12px 0px;
+}
+
+p {
+	font-size: 10px;
+}
+
+span {
+	font-size: 35px;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+	overflow: auto;
+	border-bottom: solid #808080 1px;
+	border-top: solid #808080 1px;
+	padding: 0px 50px 30px 50px;
+}
+
+#column1 {
+  float: left;
+  width: 45%;
+  padding: ;
+}
+
+#column2 {
+  float: right;
+  width: 45%;
+}
+
+li {
+	padding: 20px ;
+}
+
+.sub {
+	font-size: 10px;
+}
+
+#geico {
+	display: block;
+	text-align: center;
+}
+
+#email {
+	border-top: solid #808080 1px;
+	border-bottom: solid #808080 1px;
+
+}
+
+
+/*
+What is important to know when linking an external file (like a stylesheet) to an HTML file?
+
+The most important thing to remember (and the thing that people forget the most) is the RELATIVE directory to the stylesheet. 
+People have to make sure they are familiar with relative directories!
+
+What tricks did you use to help you with positioning? How hard was it to get the site as you wanted it?
+
+Positioning was extremely tricky for this challenge. The biggest challenge was positioning the footers (geico logo etc.). 
+This was because we were unaware of the fact that floating objects in containers make the container have a height of 0. This 
+is because containers base their size on UNFLOATED objects in it's container. To fix this issue, we had to use the overflow: auto
+tag that basically makes sure that nothing overlaps in the webpage.
+
+What CSS did you use to modify the element style (like size, color, etc.)
+
+Please see the above CSS! To make our lines, since we couldn't use the <hr> tag, we just set the borders of some elements to show as a
+solid line.
+
+Did you modify the HTML to include classes or ids? If so, which did you choose and why? If you didn't, how would you know which one 
+to add to your HTML?
+
+Yes, we did! IDs are for single uses - if you only want to change this one element. Classes are for multiple elements, very handy for
+changing multiple elements by setting their class to be the same.
+
+When you compared your site to the actual code base, which do you think had cleaner code that followed best practices and why?
+
+I definitely think our site did - mainly because we didn't use a bunch of <p>s for no apparent reason. The only thing I regret
+not doing like the website is using a table element instead of float sections to create the two columns. 
+
+*/
