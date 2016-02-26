@@ -1,12 +1,12 @@
-![Exercise 1](/imgs/ex1.PNG)
-![Exercise 2](/imgs/ex2.PNG)
-![Exercise 3](/imgs/ex3.PNG)
-![Exercise 4](/imgs/ex4.PNG)
-![Exercise 5](/imgs/ex5.PNG)
-![Exercise 6](/imgs/ex6.PNG)
-![Exercise 7](/imgs/ex7.PNG)
-![Exercise 8](/imgs/ex8.PNG)
-![Exercise 9](/imgs/ex9.PNG)
+![Exercise 1](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex1.PNG)
+![Exercise 2](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex2.PNG)
+![Exercise 3](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex3.PNG)
+![Exercise 4](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex4.PNG)
+![Exercise 5](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex5.PNG)
+![Exercise 6](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex6.PNG)
+![Exercise 7](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex7.PNG)
+![Exercise 8](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex8.PNG)
+![Exercise 9](https://raw.githubusercontent.com/taodav/phase-0/master/week-3/chrome-devtools/imgs/ex9.PNG)
 
 How can you use Chrome's DevTools inspector to help you format or position elements?
 
