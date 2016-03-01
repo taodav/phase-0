@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  width: 1200px;
+}
+
+header {
+  background-color: gray;
+  clear: both;
+  padding: 1%;
+}
+
+.column-1 {
+  width: 48%;
+  float: left;
+  padding: 1%;
+  border-right: 1px solid black;
+}
+
+.column-2 {
+  width: 48%;
+  float: right;
+  padding: 1%;
+}
+
+article {
+    border: 1% solid black;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  background-color: #e4e4e4;
+  padding: 1%;
+  clear: both;
+}
+
+article:nth-child(2) {
+  padding: 2% 0 2% 0;
+}
