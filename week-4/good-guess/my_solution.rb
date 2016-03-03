@@ -8,9 +8,9 @@
 
 def good_guess?(num)
 	if num == 42
-		puts 'true'
+		p true
 	else
-		puts 'false'
+		p false
 	end
 end
 
