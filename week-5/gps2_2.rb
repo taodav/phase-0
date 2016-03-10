@@ -77,3 +77,35 @@ def print_list
 end
 
 print_list
+
+# Reflection
+
+# What did you learn about pseudocode from working on this challenge?
+
+# I learnt about how you should always put input and output for your methods in pseudocode.
+
+# What are the tradeoffs of using Arrays and Hashes for this challenge?
+
+# Arrays are easier to use because you only have one level of object in the array. But this restricts
+# your ability to call upon them with unique names. Hashes give you that ability, but you have to deal
+# with key/value pairs, which can be quite annoying.
+
+# What does a method return?
+
+# A method returns the value that you ask it to return. In this case, it would've been a hash with
+# the groceries in it.
+
+# What kind of things can you pass into methods as arguments?
+
+# You can pass any object into a method as a parameter. From booleans to floats to integers to true/false 
+# to nils.
+
+# How can you pass information between methods?
+
+# You can pass information between methods using a global variable that allows all methods to
+# use the variable.
+
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+
+# The concept of hashes definitely solidified in this challenge. But hash transformations are still
+# a bit confusing - I'm still missing some knowledge on how to change hashes.
