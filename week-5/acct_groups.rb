@@ -13,19 +13,16 @@ def acct_group(list)
 		end
 	end
 	num_last = 0
+	#Counts the number of people in the last group
 	hash.each do |k,v|
 		if v == group_num
 			num_last += 1
 		end
 	end
 	dif_num = 1
+	#if the number of people in the last group is less than four
 	if num_last < 4
-		hash.each do |k,v|
-			if v == group_num
-				v = group_num.to_i - dif_num
-				dif_num += 1
-			end
-		end
+		
 	end
 	p hash
 end
