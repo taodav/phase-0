@@ -3,7 +3,7 @@ def acct_group(list)
 	hash = Hash.new(0)
 	group = list.split(" ")
 	group_num = 1
-
+	if group
 	group.each do |name|
 		hash[name] = group_num
 		#if the number of people in the group is divisible by 5
@@ -13,21 +13,43 @@ def acct_group(list)
 		end
 	end
 	num_last = 0
-	#Counts the number of people in the last group
+	# Counts the number of people in the last group
 	hash.each do |k,v|
 		if v == group_num
 			num_last += 1
 		end
 	end
-	dif_num = 1
-	#if the number of people in the last group is less than four
-	if num_last < 4
-		
+	# if the number of people in the last group is less than four
+
+	if num_last == 3
+		num_more = hash.to_a.at(0)
+		num_more[1] = group_num
+		new_hash = Hash[*num_more]
+		hash.merge!(new_hash)
+		p "SHIEETT"
+	elsif num_last == 2
+		num_more = hash.to_a.at(0) + hash.to_a.at(5)
+		num_more[1] = group_num
+		num_more[3] = group_num
+		new_hash = Hash[*num_more]
+		hash.merge!(new_hash)
+		p "CHECK"
+	elsif num_last == 1
+		num_more = hash.to_a.at(0) + hash.to_a.at(5) + hash.to_a.at(10)
+		num_more[1] = group_num
+		num_more[3] = group_num
+		num_more[5] = group_num
+		new_hash = Hash[*num_more]
+		hash.merge!(new_hash)
+		p "UHUH"
 	end
-	p hash
+	p Hash[hash.sort_by{|k,v| v}]
 end
 
-acct_group("David Grace Aleks Ruoshan Liam Andrew Robert Jonas Conrad Kotachi Snakehips King Bryson")
+acct_group("David Grace Aleks Ruoshan Liam Andrew Robert Jonas Conrad Kotachi Snakehips")
+
+#Refactored solution
+
 
 =begin
 	
