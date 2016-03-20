@@ -6,7 +6,7 @@ array = [[1,2], ["inner", ["eagle", "par", ["FORE", "hook"]]]]
 
 # attempts:
 # ============================================================
-
+puts array[1][1][2][0]
 
 
 # ============================================================
@@ -18,7 +18,7 @@ hash = {outer: {inner: {"almost" => {3 => "congrats!"}}}}
 
 # attempts:
 # ============================================================
-
+puts hash [:outer][:inner]["almost"][3]
 
 
 # ============================================================
@@ -31,7 +31,7 @@ nested_data = {array: ["array", {hash: "finished"}]}
 
 # attempts:
 # ============================================================
-
+puts nested_data [:array][1][:hash]
 
 
 # ============================================================
@@ -40,8 +40,27 @@ nested_data = {array: ["array", {hash: "finished"}]}
 
 number_array = [5, [10, 15], [20,25,30], 35]
 
+number_array.map! do |element|
+	if element.kind_of?(Array)
+		element.map! {|e| e + 5}
+	else 
+		element + 5
+	end
+end
+puts number_array
 
 
 # Bonus:
 
 startup_names = ["bit", ["find", "fast", ["optimize", "scope"]]]
+
+startup_names.map! do |element|
+	if element.kind_of?(Array)
+		element.map! {|e| if e.kind_of?(Array) 
+		e.map! {|a| a + "ly"} else e + "ly" end }
+	else 
+		element + "ly"
+	end
+end
+
+puts startup_names
