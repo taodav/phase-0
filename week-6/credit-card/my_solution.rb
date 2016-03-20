@@ -67,3 +67,17 @@ card = CreditCard.new(4408041234567901)
 card.check_card
 
 # Reflection
+
+=begin
+
+What was the most difficult part of this challenge for you and your pair?
+The most difficult part of the challenge was debugging - to use either odd or even etc.
+
+What new methods did you find to help you when you refactored?
+We used the methods even and odd, as well as inject (which we've seen before.)
+
+What concepts or learnings were you able to solidify in this challenge?
+I was able to solidify my understanding of the split function - normally I use it to split
+a string based on it's spaces.
+
+=end
