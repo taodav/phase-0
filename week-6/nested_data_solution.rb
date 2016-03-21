@@ -63,6 +63,7 @@ startup_names.map! do |element|
 	end
 end
 
+<<<<<<< HEAD
 puts startup_names
 =begin
 REFLECTION
@@ -79,3 +80,6 @@ We reused mostly familiar statements, but also used map!, which is somewhat more
 me. We used map! because it's a destructive method.
 
 =end
+=======
+puts startup_names
+>>>>>>> 6.5-pairing
