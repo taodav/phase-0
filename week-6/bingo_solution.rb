@@ -86,7 +86,18 @@ attr_reader :bingo
 
   def call_digit
     @letter = @bingo[rand(0..4)]
-    @number = rand(1...100)
+    if @letter == "B"
+      @number = rand(1..15)
+    elsif @letter == "I"
+      @number = rand(16..30)
+    elsif @letter == "N"
+      @number = rand(31..45)
+    elsif @letter == "G"
+      @number = rand(46..60)
+    elsif @letter == "O"
+      @number = rand(61..75)
+    end
+
     p "The digit called is #{@letter}#{@number}!"
   end
 
@@ -128,8 +139,43 @@ board = [[47, 44, 71, 8, 88],
         [75, 70, 54, 80, 83]]
 
 new_game = BingoBoard.new(board)
-# new_game.call_digit
-# new_game.check_board
 new_game.bingo_card
+new_game.call_digit
+new_game.check_board
 
 #Reflection
+
+=begin
+
+How difficult was pseudocoding this challenge? What do you think of your pseudocoding style?
+To be completely honest, I felt like pseudocoding for this challenge - while helpful at some points,
+kind of made the code a lot messier. I think I use pseudocode only when I really need to lay my thoughts
+out and organize them.
+
+What are the benefits of using a class for this challenge?
+Making an entirely new class allows you to make new objects of that class, which makes sense in 
+this case - where you have new bingo games for every class.
+
+How can you access coordinates in a nested array?
+You can access coordinates in a nested array through using more than one square bracket when calling
+an element in an array (in this case, it's another array!)
+
+What methods did you use to access and modify the array?
+In my opinion, the easiest way to modify an array with depth is to use multiple iterators.
+I used iterators to modify the array, as well as the index method to call upon the array's indices.
+
+Give an example of a new method you learned while reviewing the Ruby docs. Based on what you see 
+in the docs, what purpose does it serve, and how is it called?
+I learnt to use the index method - it gives you the index number of a certain element that you
+ask of it. You call it by sending the message .index to your array object, with the object you want 
+to look for in parentheses after the message .index.
+
+How did you determine what should be an instance variable versus a local variable?
+If I needed the variable accross my methods, then I used an instance method. Otherwise, I used
+local variables for variables that I only needed inside methods.
+
+What do you feel is most improved in your refactored solution?
+I managed to cut down on 7 lines of code and many more lines of pseudocode in my refactored solution
+when it came to finding the element in the array that was called, and putting an "X" in its place.
+
+=end
