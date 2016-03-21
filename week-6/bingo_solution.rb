@@ -86,6 +86,7 @@ attr_reader :bingo
 
   def call_digit
     @letter = @bingo[rand(0..4)]
+    #set the letter equal to a random letter with an index of @bingo that's a random number between 0 and 4
     if @letter == "B"
       @number = rand(1..15)
     elsif @letter == "I"
@@ -96,6 +97,7 @@ attr_reader :bingo
       @number = rand(46..60)
     elsif @letter == "O"
       @number = rand(61..75)
+    #Depending on the letter, set the number equal to a random number in the range of each.
     end
 
     p "The digit called is #{@letter}#{@number}!"
@@ -106,27 +108,42 @@ attr_reader :bingo
     @bingo_board.each do |element|
       num_range << element[@bingo.index(@letter)]
     end
+    #iterate through the bingo board
+    #push the elements that correspond to the selected letter by setting the index in accordance to @letter
     p "Your number range is #{num_range}"
-    #array(index) in which our number appears: num_range.index(@number)
+    #IF the number range index is nil, tell the player no numbers were called.
     if num_range.index(@number) == nil
       p "Sorry! None of your numbers were called"
+    #ELSE set the called number as "X" by calling on the nested array through the use of indexing @number and 
+    #@letter.
     else
     @bingo_board[num_range.index(@number)][@bingo.index(@letter)] = "X"
     end
+    #return and print the changed bingo board
     p @bingo_board
   end
 
   def bingo_card
     num_of_arrays = 5
+    #Set the number of arrays
     @bingo_board = []
+    #Clear bingo_board and make it an empty array
     sub_board = []
+    #create a variable for the nested arrays and set it equal to an empty array
     until num_of_arrays == 0
+      #UNTIL the variable num_of_arrays is equal to 0
       sub_board = [rand(1..15), rand(16..30), rand(31..45), rand(46..60), rand(61..75)]
+      #Set sub_board equal to an array with 5 random numbers in their respective ranges.
       @bingo_board.push(sub_board)
+      #push this sub_board onto the main @bingo_board
       num_of_arrays -= 1
+      #minus 1 from the counter
     end
+    #repeat 5 times to make 5 arrays of random numbers in the set ranges.
     @bingo_board[2][2] = "  "
+    #set the middle space as blank.
     p @bingo_board
+    #return bingo_board.
   end
 
 end
