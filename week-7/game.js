@@ -42,7 +42,11 @@ var yourself = {
 	health: 100
 	position-x: Math.floor((Math.random() * 20) +1)
 	position-y: Math.floor((Math.random() * 20) +1)
+<<<<<<< HEAD
 	attack: function(yourself[health] -= 3)
+=======
+	attack: 10
+>>>>>>> 1aad23730df1f84c8b66da444fcb00bd4ac0b477
 }
 
 
