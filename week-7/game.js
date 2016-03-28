@@ -38,58 +38,232 @@ ELSE IF the dragon's health == 0 && the hatchling's health == 0, LOG (You win th
 */
 // Initial Code
 
-var yourself = {
-	health: 100
-	position-x: Math.floor((Math.random() * 20) +1)
-	position-y: Math.floor((Math.random() * 20) +1)
-<<<<<<< HEAD
-	attack: function(yourself[health] -= 3)
-=======
-	attack: 10
->>>>>>> 1aad23730df1f84c8b66da444fcb00bd4ac0b477
-}
+// var yourself = {
+// 	health: 100,
+// 	"position x": 1,
+// 	// Math.floor((Math.random() * 20) +1),
+// 	"position y": 1,
+// 	// Math.floor((Math.random() * 20) +1),
+// }
 
+// var enemies = {
+// 	dragon: {
+// 		health: 150,
+// 		"position x": 2,
+// 		// Math.floor((Math.random() * 20) +1),
+// 		"position y": 2,
+// 		// Math.floor((Math.random() * 20) +1),
+// 	}
+// }
 
-var dragon = {
-	health: 200
-	position-x: Math.floor((Math.random() * 20) +1)
-	position-y: Math.floor((Math.random() * 20) +1)
-	attack: function(yourself[health] -= 5)
-}
+// function move(dir){
+// 	if (dir == "N"){
+// 		if (yourself["position y"] >= 20) {
+// 			console.log("You've reached the north border! Head the other way!") }
+// 		else{
+// 			yourself["position y"] += 1}}
+// 	else if (dir == "E"){
+// 		if (yourself["position x"] >= 20) {
+// 			console.log("You've reached the east border! Head the other way!") }
+// 		else{
+// 			yourself["position x"] += 1} }
+// 	else if (dir == "S"){
+// 		if (yourself["position y"] >= 20) {
+// 			console.log("You've reached the south border! Head the other way!") }
+// 		else{
+// 			yourself["position y"] -= 1} }
+// 	else if (dir == "W"){
+// 		if (yourself["position x"] >= 20) {
+// 			console.log("You've reached the west border! Head the other way!") }
+// 		else{
+// 			yourself["x"] -= 1} }
+// 	else {
+// 		move(prompt("That's not a valid move... try again!"))
+// 	}
+// 	console.log("You are currently at N" + yourself["position y"] + "E" + yourself["position x"])
+// 	console.log("Dragon currently at N" + enemies["dragon"]["position y"] + "E" + enemies["dragon"]["position x"])
 
-var hatchling1 = {
-	health: 75
-	position-x: Math.floor((Math.random() * 20) +1)
-	position-y: Math.floor((Math.random() * 20) +1)
-	attack: function(yourself[health] -= 3)
-}
+// 	if (enemies.dragon["position y"] == yourself["position y"] && enemies.dragon["position x"] == yourself["position x"]) {
+// 		var choice = prompt("You've encountered the dragon! What do you want to do? (Attack or Move")
+// 			if (choice == "Attack" || "attack"){
+// 				attack()
+// 			}
+// 			else if (choice !== "Attack" || "attack"){
+// 				move(prompt("where do you want to go? (N, E, S, W)"))
+// 			}
+// 	}
+// 	else {
+// 		move(prompt("where do you want to go? (N, E, S, W)"))
+// 	}
+// }
 
-var hatchling2 = {
-	health: 75
-	position-x: Math.floor((Math.random() * 20) +1)
-	position-y: Math.floor((Math.random() * 20) +1)
-	attack: function(yourself[health] -= 3)
-}
+// function attack() {
+// 	console.log("You swing at the dragon")
+// 	var swing = Math.random()
+// 		if (swing <= 0.8){
+// 			enemies.dragon.health -= 10
+// 			console.log("The dragon has " + enemies.dragon.health + " health left!")
+// 		}
+// 		else {
+// 			console.log("You swung your mighty sword but missed the sneaky dragon!")
+// 		}
+// 	console.log("The dragon snaps his jaws and attempts to bite you!")
+// 	var bite = Math.random()
+// 		if (bite <= 0.6){
+// 			yourself.health -= 10
+// 			console.log("You have " + yourself.health + " health left!")
+// 		}
+// 		else {
+// 			console.log("You rolled to the side and avoided the dragon's mandibles!")
+// 		}
+// 	if (enemies.dragon.health == 0) {
+// 		console.log("The dragon has been defeated. Congratulations! You won!")
+// 		return
+// 	}
+// 	else if (yourself.health == 0) {
+// 		console.log("You've been defeated by the dragon. Game over!")
+// 		return
+// 	}
+// 	var after_attack = prompt("Will you swing again or run away? (Attack or Move)")
+// 	if (after_attack == "Attack" || "attack"){
+// 		attack()
+// 	}
+// 	else if (after_attack !== "Attack" || "attack") {
+// 		move(prompt("where do you want to go? (N, E, S, W)"))
+// 	}
+// }
 
-function move(dir){
-	if dir == "N"
-		yourself
-}
+// move(prompt("where do you want to go? (N, E, S, W)"))
 
 
 // Refactored Code
 
+var yourself = {
+	health: 100,
+	"position x": 1,
+	// Math.floor((Math.random() * 20) +1),
+	"position y": 1,
+	// Math.floor((Math.random() * 20) +1),
+}
 
+var enemies = {
+	dragon: {
+		health: 150,
+		"position x": 1,
+		// Math.floor((Math.random() * 20) +1),
+		"position y": 3,
+		// Math.floor((Math.random() * 20) +1),
+	},
 
+	babyDragon: {
+		health: 50,
+		"position x": 1,
+		// Math.floor((Math.random() * 20) +1),
+		"position y": 2,
+		// Math.floor((Math.random() * 20) +1),
+	}
+}
 
+function move(dir){
+	if (dir == "n"){
+		if (yourself["position y"] >= 20) {
+			console.log("You've reached the north border! Head the other way!") }
+		else{
+			yourself["position y"] += 1}}
+	else if (dir == "e"){
+		if (yourself["position x"] >= 20) {
+			console.log("You've reached the east border! Head the other way!") }
+		else{
+			yourself["position x"] += 1} }
+	else if (dir == "s"){
+		if (yourself["position y"] >= 20) {
+			console.log("You've reached the south border! Head the other way!") }
+		else{
+			yourself["position y"] -= 1} }
+	else if (dir == "w"){
+		// .toLowerCase() 
+		if (yourself["position x"] >= 20) {
+			console.log("You've reached the west border! Head the other way!") }
+		else{
+			yourself["x"] -= 1} }
+	else {
+		var direction_1 = prompt("That's not a valid move... try again!")
+		move(direction_1)
+	}
+	console.log("You are currently at N" + yourself["position y"] + "E" + yourself["position x"])
+	console.log("Dragon currently at N" + enemies["dragon"]["position y"] + "E" + enemies["dragon"]["position x"])
+
+	if (enemies.dragon["position y"] == yourself["position y"] && enemies.dragon["position x"] == yourself["position x"]) {
+		var choice = prompt("You've encountered the dragon! What do you want to do? (Attack or Move")
+			if (choice == "Attack" || "attack"){
+				attack()
+			}
+			else if (choice !== "Attack" || "attack"){
+				move(prompt("where do you want to go? (N, E, S, W)"))
+			}
+	}
+	else {
+		var direction = prompt("where do you want to go? (N, E, S, W)")
+		move(direction)
+	}
+}
+
+function attack() {
+	console.log("You swing at the dragon")
+	var swing = Math.random()
+		if (swing <= 0.8){
+			enemies.dragon.health -= 10
+			console.log("The dragon has " + enemies.dragon.health + " health left!")
+		}
+		else {
+			console.log("You swung your mighty sword but missed the sneaky dragon!")
+		}
+	console.log("The dragon snaps his jaws and attempts to bite you!")
+	var bite = Math.random()
+		if (bite <= 0.6){
+			yourself.health -= 10
+			console.log("You have " + yourself.health + " health left!")
+		}
+		else {
+			console.log("You rolled to the side and avoided the dragon's mandibles!")
+		}
+	if (enemies.dragon.health == 0) {
+		console.log("The dragon has been defeated. Congratulations! You won!")
+		return
+	}
+	else if (yourself.health == 0) {
+		console.log("You've been defeated by the dragon. Game over!")
+		return
+	}
+	var after_attack = prompt("Will you swing again or run away? (Attack or Move)")
+	if (after_attack == "Attack" || "attack"){
+		attack()
+	}
+	else if (after_attack !== "Attack" || "attack") {
+		move(prompt("where do you want to go? (N, E, S, W)"))
+	}
+}
+
+move(prompt("Which direction are we going? (N, E, W, S)").toLowerCase())
 
 
 // Reflection
-//
-//
-//
-//
-//
-//
-//
-//
+/*
+What was the most difficult part of this challenge?
+
+The most difficult part of this challenge was debugging. Half the time I feel like getting this
+game to work was just pure luck - if it worked it was with a bit of luck!
+
+What did you learn about creating objects and functions that interact with one another?
+
+I learnt that Javascript has a lot of different syntaxes used for calling different properties
+or variables.
+
+Did you learn about any new built-in methods you could use in your refactored solution? If 
+so, what were they and how do they work?
+
+I solidified my knowledge on the prompt method, and used the prompt method in order to get arguments for
+my functions. I also tried to factor in 	
+
+How can you access and manipulate properties of objects?
+*/
