@@ -165,6 +165,9 @@ var enemies = {
 }
 
 function move(dir){
+	if (dir == "exit"){
+		return
+	}
 	if (dir == "n"){
 		if (yourself["position y"] >= 20) {
 			console.log("You've reached the north border! Head the other way!") }
@@ -181,24 +184,23 @@ function move(dir){
 		else{
 			yourself["position y"] -= 1} }
 	else if (dir == "w"){
-		// .toLowerCase() 
 		if (yourself["position x"] >= 20) {
 			console.log("You've reached the west border! Head the other way!") }
 		else{
 			yourself["x"] -= 1} }
-	else {
+	else if (dir !== "n" || dir !== "e" || dir !== "s" || dir !== "w"){
 		var direction_1 = prompt("That's not a valid move... try again!")
-		move(direction_1)
+		move(direction_1.toLowerCase())
 	}
 	console.log("You are currently at N" + yourself["position y"] + "E" + yourself["position x"])
 	console.log("Dragon currently at N" + enemies["dragon"]["position y"] + "E" + enemies["dragon"]["position x"])
 
 	if (enemies.dragon["position y"] == yourself["position y"] && enemies.dragon["position x"] == yourself["position x"]) {
 		var choice = prompt("You've encountered the dragon! What do you want to do? (Attack or Move")
-			if (choice == "Attack" || "attack"){
+			if (choice == "Attack" || choice == "attack"){
 				attack()
 			}
-			else if (choice !== "Attack" || "attack"){
+			else {
 				move(prompt("where do you want to go? (N, E, S, W)"))
 			}
 	}
@@ -227,19 +229,19 @@ function attack() {
 		else {
 			console.log("You rolled to the side and avoided the dragon's mandibles!")
 		}
-	if (enemies.dragon.health == 0) {
+	if (enemies.dragon.health <= 0) {
 		console.log("The dragon has been defeated. Congratulations! You won!")
 		return
 	}
-	else if (yourself.health == 0) {
+	else if (yourself.health <= 0) {
 		console.log("You've been defeated by the dragon. Game over!")
 		return
 	}
 	var after_attack = prompt("Will you swing again or run away? (Attack or Move)")
-	if (after_attack == "Attack" || "attack"){
+	if (after_attack == "attack"){
 		attack()
 	}
-	else if (after_attack !== "Attack" || "attack") {
+	else {
 		move(prompt("where do you want to go? (N, E, S, W)"))
 	}
 }
