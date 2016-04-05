@@ -190,3 +190,30 @@ function call(){
 
 createBoard()
 call()
+
+/*
+REFLECTION
+
+What concepts did you solidify in working on this challenge? 
+
+Throughout this challenge, my understanding of iteration and especially prototypes solidified.
+After working for so long on the challenge, I've come to realize just how different Ruby and
+JavaScript are as programming languages.
+
+What was the most difficult part of this challenge?
+
+The most difficult part of this challenge was trying to initialize a bingo board in the Bingo Board
+constructor once a new instance of the constructor was made. I didn't manage to figure out how to do this, 
+so I had to settle with not using constructors and prototypes.
+
+Did you solve the problem in a new way this time?
+
+Yes, I did manage to solve this problem in a more sophisticated way - especially with the generation
+of the bingo board.
+
+Was your pseudocode different from the Ruby version? What was the same and what was different?
+
+The pseudocode was generally the same as the Ruby version - the biggest difference being how iteration
+works with the two languages.
+
+*/
