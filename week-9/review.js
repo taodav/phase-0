@@ -53,35 +53,35 @@ Create a property function with no parameters, that logs the entire grocery list
 //REFACTORED SOLUTION
 
 
-function Grocery_list(list){
-	this.list = list;
-}
+// function Grocery_list(list){
+// 	this.list = list;
+// }
 
-Grocery_list.prototype = {
-	add_item: function add_item(item, quantity) {
-		this.list[item] = quantity;
-	},
-	rm_item: function rm_item(item1) {
-		delete this.list[item1];
-	},
-	change_qty: function change_qty(item2, quantity2) {
-		if (!this.list.hasOwnProperty(item2)) {
-			console.log("This item isn't on the list! To add it onto your list, run the add_item function.");
-			console.log(item2)
-		}
-		else {
-			this.list[item2] = quantity2;
-		}
-	},
-	print_list: function print_list() {
-		console.log(this.list);
-	},
-}
+// Grocery_list.prototype = {
+// 	add_item: function add_item(item, quantity) {
+// 		this.list[item] = quantity;
+// 	},
+// 	rm_item: function rm_item(item1) {
+// 		delete this.list[item1];
+// 	},
+// 	change_qty: function change_qty(item2, quantity2) {
+// 		if (!this.list.hasOwnProperty(item2)) {
+// 			console.log("This item isn't on the list! To add it onto your list, run the add_item function.");
+// 			console.log(item2)
+// 		}
+// 		else {
+// 			this.list[item2] = quantity2;
+// 		}
+// 	},
+// 	print_list: function print_list() {
+// 		console.log(this.list);
+// 	},
+// }
 
 
-var tuesday = new Grocery_list({"fish": 2, "meatballs": 20, "milk": 2})
-tuesday.change_qty("fish", 3)
-tuesday.print_list()
+// var tuesday = new Grocery_list({"fish": 2, "meatballs": 20, "milk": 2})
+// tuesday.change_qty("fish", 3)
+// tuesday.print_list()
 
 /*
 REFLECTION
@@ -105,3 +105,88 @@ No, seeing as you had to keep track of how many of the objects you needed, an ob
 made the most sense.
 
 */
+
+
+//BINGO GAME
+
+/*
+PSEUDOCODE
+
+Set a variable bingo_board equal to the nested array of a bingo board
+Define a function call that generates a random number between 1-99 and a random letter in 'BINGO' through
+using the index of the BINGO array.
+iterate through each array, IF the called letter and position correspond with the correct number/position,
+change the called number to X
+
+
+*/
+
+//INITIAL SOLUTION
+
+// var bingo_board = [[47, 44, 71, 8, 88],
+//                [22, 69, 75, 65, 73],
+//                [83, 85, 97, 89, 57],
+//                [25, 31, 96, 68, 51],
+//                [75, 70, 54, 80, 83]]
+
+
+// var bingo = ["B", "I", "N", "G", "O"]
+// function call(){
+// 	var number = Math.floor(Math.random() * 100);
+// 	var index = Math.floor(Math.random() * 5);
+// 	var letter = bingo[index];
+// 	console.log(letter + number + " Was called!");
+// 	for (var i = 0; i < bingo.length; i++){
+// 		for (var e = 0; e < bingo.length; e++){
+// 			if (bingo_board[i][index] == number){
+// 				bingo_board[i][index] = "X";
+// 				console.log(bingo_board)
+// 				return
+// 			}
+// 		}
+// 	}
+// 	console.log("Your number wasn't called. Call again!");
+
+// }
+
+// call()
+//REFACTORED SOLUTION
+var bingo = ["B", "I", "N", "G", "O"];
+var board = []
+
+function createBoard() {
+		var alt = []
+		// Setting a for loop where i is equal to first level array
+		for (var i = 0; i < 5; i++){
+			//Setting a for loop where e is equal to second level element
+			var inner = []
+			for (var e = 0; e < 5; e++){
+				var low = e * 15 + 1;
+				var high = (e + 1) * 15;
+				inner[e] = Math.floor(Math.random() * (high - low) + low);
+			}
+			alt[i] = inner
+		}
+		board = alt
+		console.log(board)
+	}
+
+
+function call(){
+		var index = Math.floor(Math.random() * 5);
+		var number = Math.floor(Math.random() * ((index + 1) * 15 - (index * 15 + 1)) + (index * 15 + 1));
+		var letter = bingo[index];
+		console.log(letter + number + " Was called!");
+		for (var i = 0; i < 5; i++){
+			for (var e = 0; e < 5; e++){
+				if (board[i][index] == number){
+					board[i][index] = "X";
+					console.log(board)
+					return
+				}
+			}
+		}
+	}
+
+createBoard()
+call()
